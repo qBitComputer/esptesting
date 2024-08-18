@@ -19,7 +19,6 @@ void app_main(void)
 		gpio_set_level(27, 1);
 		vTaskDelay(100);
 		gpio_set_level(27, 0);
-		vTaskDelay(100);
 
 
 	} 
