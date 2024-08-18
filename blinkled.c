@@ -14,10 +14,10 @@ void app_main(void)
 	gpio_set_direction(27, GPIO_MODE_OUTPUT);
 	while (1){
 		gpio_set_level(26, 1);
-		vTaskDelay(100);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
 		gpio_set_level(26, 0);
 		gpio_set_level(27, 1);
-		vTaskDelay(100);
+		vTaskDelay(1000 / portTICK_PERIOD_MS);
 		gpio_set_level(27, 0);
 
 
