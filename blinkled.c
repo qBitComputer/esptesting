@@ -10,11 +10,17 @@ void app_main(void)
 	ESP_LOGI(yesTask, "Starting up!");
 	gpio_reset_pin(26);
 	gpio_set_direction(26, GPIO_MODE_OUTPUT);
+	gpio_reset_pin(27);
+	gpio_set_direction(27, GPIO_MODE_OUTPUT);
 	while (1){
 		gpio_set_level(26, 1);
-		vTaskDelay(1000);
+		vTaskDelay(100);
 		gpio_set_level(26, 0);
-		vTaskDelay(1000);
+		gpio_set_level(27, 1);
+		vTaskDelay(100);
+		gpio_set_level(27, 0);
+		vTaskDelay(100);
+
 
 	} 
 }
