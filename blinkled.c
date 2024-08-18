@@ -5,7 +5,7 @@
 void app_main(void)
 {
 	char *yesTask = pcTaskGetName(NULL);
-	ESPLOGI(yesTask, "Starting up!");
+	ESP_LOGI(yesTask, "Starting up!");
 	while (1){
 		;;
 	} 
